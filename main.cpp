@@ -41,8 +41,9 @@ int main(){
 
     cout << "getTimeSlot: " << endl;
     cout << getTimeSlot(testing) << endl;
-    cout << "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]" << endl;
-    cout << (getTimeSlot(testing) == "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]") << endl;
+    string idk = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]";
+    cout << idk << endl;
+    cout << (getTimeSlot(testing) == idk) << endl;
     cout << "----------------------------";
     //cout << timeOverlap(late1,late2) << endl; 
 
