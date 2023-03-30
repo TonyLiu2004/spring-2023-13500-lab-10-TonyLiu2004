@@ -42,14 +42,13 @@ int main(){
     cout << "getTimeSlot: " << endl;
     string idk = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]  ";
     string what = getTimeSlot(testing);
-    for(auto a : what){
-        cout << a << endl;
-    }
-    cout << "------" << endl;
     cout << what << endl;
     cout << idk << endl;
+    for(int i = 0;i < 20;i++){
+        cout << what[i] + idk[i] << endl;
+    }
     cout << (what == idk) << endl;
-    cout << "----------------------------";
+    cout << "----------------------------" << endl;
     //cout << timeOverlap(late1,late2) << endl; 
 
     //TimeSlot testEarly = earlierStart(testing, daytime);
