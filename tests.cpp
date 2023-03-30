@@ -34,3 +34,11 @@ TEST_CASE("getTimeSlot"){
     CHECK(getTimeSlot(t1) == "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]");
     CHECK(getTimeSlot(t2) == "Julius Caesar ROMANCE (90 min) [starts at 10:10, ends by 11:40]");
 }
+
+TEST_CASE("scheduleAfter"){
+    Movie bananas = {"bananas", ACTION, 130};
+    Movie rick = {"Never gonna give you up", ROMANCE,90};
+    TimeSlot testing = {bananas,{14,10}};
+    
+    TimeSlot t1 = scheduleAfter(testing,rick);
+}

@@ -27,3 +27,7 @@ int minutesUntil(Time earlier, Time later);
 Time addMinutes(Time time0, int min);
 void printMovie(Movie mv);
 std::string getTimeSlot(TimeSlot ts);
+TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);
+TimeSlot earlierStart(TimeSlot ts1,TimeSlot ts2);
+TimeSlot laterStart(TimeSlot ts1,TimeSlot ts2);
+bool timeOverlap(TimeSlot ts1, TimeSlot ts2);

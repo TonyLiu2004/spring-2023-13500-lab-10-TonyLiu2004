@@ -63,3 +63,43 @@ string getTimeSlot(TimeSlot ts){
     ret+= ts.movie.title + " " + g + " (" + std::to_string(ts.movie.duration) + " min) [starts at " + std::to_string(ts.startTime.h) + ":" + std::to_string(ts.startTime.m) + ", ends by " + std::to_string(end.h) + ":" + std::to_string(end.m) + "]\n";
     return ret;
 }
+
+TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie){
+    TimeSlot ret = {nextMovie,addMinutes(ts.startTime,ts.movie.duration)};
+    return ret;
+}
+
+TimeSlot earlierStart(TimeSlot ts1,TimeSlot ts2){
+    Time startTime1 = ts1.startTime;
+    Time startTime2 = ts2.startTime; 
+    if((startTime1.h == startTime2.h) && (startTime1.m < startTime2.m)){
+        return ts1;
+    }else if(startTime1.h < startTime2.h){
+        return ts1;
+    }
+    return ts2;
+}
+
+TimeSlot laterStart(TimeSlot ts1,TimeSlot ts2){
+    Time startTime1 = ts1.startTime;
+    Time startTime2 = ts2.startTime; 
+    if((startTime1.h == startTime2.h) && (startTime1.m < startTime2.m)){
+        return ts2;
+    }else if(startTime1.h < startTime2.h){
+        return ts2;
+    }
+    return ts1;
+}
+
+bool timeOverlap(TimeSlot ts1, TimeSlot ts2){
+    Time startTime1 = ts1.startTime;
+    Time startTime2 = ts2.startTime;
+    TimeSlot earlier = earlierStart(ts1,ts2);
+    TimeSlot later = laterStart(ts1,ts2);
+
+    int between = minutesUntil(earlier.startTime,later.startTime);
+    if(between < earlier.movie.duration){
+        return true;
+    }
+    return false;
+}
