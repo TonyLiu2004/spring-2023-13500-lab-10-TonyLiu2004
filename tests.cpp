@@ -25,3 +25,12 @@ TEST_CASE("addMinutes"){
     CHECK(added2.h == 0);
     CHECK(added2.m == 0);
 }
+
+TEST_CASE("getTimeSlot"){
+    Movie bananas = {"bananas", ACTION, 130};
+    TimeSlot t1 = {bananas,{14,10}};
+    Movie caesar = {"Julius Caesar",ROMANCE,90};
+    TimeSlot t2 = {caesar,{10,10}};
+    CHECK(getTimeSlot(t1) == "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]");
+    CHECK(getTimeSlot(t2) == "Julius Caesar ROMANCE (90 min) [starts at 10:10, ends by 11:40]");
+}
