@@ -48,3 +48,20 @@ void printMovie(Movie mv){
     }
     cout << mv.title << " " << g << " (" << mv.duration << " min)";
 }
+
+string getTimeSlot(TimeSlot ts){
+    string ret = "";
+    string g;
+    switch (ts.movie.genre) { // g becomes the genre
+        case ACTION   : g = "ACTION"; break;
+        case COMEDY   : g = "COMEDY"; break;
+        case DRAMA    : g = "DRAMA";  break;
+        case ROMANCE  : g = "ROMANCE"; break;
+        case THRILLER : g = "THRILLER"; break;
+    }
+    Time end = addMinutes(ts.startTime,ts.movie.duration); // the ending time for the movie
+    ret+= ts.movie.title + " " + g + " (";
+    ret+= ts.movie.duration + "min) [starts at " + ts.startTime.h;
+    ret+= ":" + ts.startTime.m + ", ends by " + end.h + ":" + end.m + "]\n";
+    return ret;
+}
