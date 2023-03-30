@@ -62,5 +62,7 @@ int main(){
     Movie rick = {"Never gonna give you up", ROMANCE,90};    
     TimeSlot schedule = scheduleAfter(testing,rick);
     cout << getTimeSlot(schedule) << endl;
+    cout << schedule.startTime.h << " " << schedule.startTime.m << endl;
+    cout << schedule.movie.title << " " << schedule.movie.duration << " " << schedule.movie.genre << endl;
     return 0;
 }
