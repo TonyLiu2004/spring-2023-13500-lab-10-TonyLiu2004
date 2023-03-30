@@ -40,6 +40,8 @@ int main(){
     TimeSlot late2 = {movie4,{11,30}};
 
     cout << "getTimeSlot: " << endl;
+    cout << getTimeSlot(testing) << endl;
+    cout << "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]" << endl;
     cout << (getTimeSlot(testing) == "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]") << endl;
     cout << "----------------------------";
     //cout << timeOverlap(late1,late2) << endl; 
