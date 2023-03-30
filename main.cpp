@@ -45,7 +45,7 @@ int main(){
     cout << what << endl;
     cout << idk << endl;
     for(int i = 0;i < 20;i++){
-        cout << what[i] + idk[i] << endl;
+        cout << what[i] + " " + idk[i] << endl;
     }
     cout << (what == idk) << endl;
     cout << "----------------------------" << endl;
