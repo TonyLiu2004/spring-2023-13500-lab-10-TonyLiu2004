@@ -44,7 +44,7 @@ int main(){
     string t123 = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]\t";
     string pls = "";
     cout << "pls: " << pls << endl;
-    for(auto x : t123){
+    for(auto x : what){
         pls+=x;
     }
     for (auto x : pls){
