@@ -60,10 +60,6 @@ string getTimeSlot(TimeSlot ts){
         case THRILLER : g = "THRILLER"; break;
     }
     Time end = addMinutes(ts.startTime,ts.movie.duration); // the ending time for the movie
-    ret+= ts.movie.title + " " + g + " (";
-    ret+= ts.movie.duration + "min) [starts at " + ts.startTime.h;
-    ret+= ":" + ts.startTime.m;
-    ret+= ", ends by " + end.h;
-    ret+= ":" + end.m, "]\n";
+    ret+= ts.movie.title + " " + g + " (", ts.movie.duration + "min) [starts at " + ts.startTime.h, ":" + ts.startTime.m, ", ends by " + end.h, ":" + end.m, "]\n";
     return ret;
 }
