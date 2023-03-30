@@ -45,6 +45,7 @@ int main(){
     for(auto a : what){
         cout << a << endl;
     }
+    cout << "------" << endl;
     cout << what << endl;
     cout << idk << endl;
     cout << (what == idk) << endl;
