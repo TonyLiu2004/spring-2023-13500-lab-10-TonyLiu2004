@@ -41,7 +41,7 @@ int main(){
 
     cout << "getTimeSlot: " << endl;
     string what = getTimeSlot(testing);
-    string t123 = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]\t";
+    string t123 = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]\n";
     string pls = "";
     cout << "pls: " << pls << endl;
     for(auto x : what){
@@ -53,6 +53,7 @@ int main(){
     cout << what << endl;
     cout << "compare: " << endl;
     cout << (what == pls) << endl;
+    cout << (what == t123) << endl;
     cout << "----------------------------" << endl;
     //cout << timeOverlap(late1,late2) << endl; 
 
