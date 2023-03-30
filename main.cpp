@@ -41,6 +41,11 @@ int main(){
 
     cout << "getTimeSlot: " << endl;
     string what = getTimeSlot(testing);
+    string pls = "";
+    for(auto x : what){
+        pls+=x;
+    }
+    cout << (what == pls) << endl;
     cout << what << endl;
     cout << "----------------------------" << endl;
     //cout << timeOverlap(late1,late2) << endl; 
