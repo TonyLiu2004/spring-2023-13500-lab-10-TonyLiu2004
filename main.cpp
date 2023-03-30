@@ -59,9 +59,7 @@ int main(){
     TimeSlot t1 = scheduleAfter(testing,bananas);
     printTimeSlot(t1);
     */
-    Movie rick = {"Never gonna give you up", ROMANCE,90};
-    TimeSlot testing = {bananas,{14,10}};
-    
+    Movie rick = {"Never gonna give you up", ROMANCE,90};    
     TimeSlot schedule = scheduleAfter(testing,rick);
     cout << getTimeSlot(schedule) << endl;
     return 0;
