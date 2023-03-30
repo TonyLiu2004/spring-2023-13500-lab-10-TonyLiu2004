@@ -43,5 +43,5 @@ TEST_CASE("scheduleAfter"){
     TimeSlot t1 = scheduleAfter(testing,rick);
     CHECK(t1.startTime.h == 16);
     CHECK(t1.startTime.m == 20);
-    CHECK(t1.movie.title = "Never gonna give you up");
+    CHECK(t1.movie.title == "Never gonna give you up");
 }
