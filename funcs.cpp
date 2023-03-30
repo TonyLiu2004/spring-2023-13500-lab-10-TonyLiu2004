@@ -61,8 +61,8 @@ string getTimeSlot(TimeSlot ts){
     }
     Time end = addMinutes(ts.startTime,ts.movie.duration); // the ending time for the movie
     ret+= ts.movie.title + " " + g + " (";
-    cout << ts.movie.duration << endl;
     ret+= ts.movie.duration;
-    ret+= " min) [starts at " + ts.startTime.h, ":" + ts.startTime.m, ", ends by " + end.h, ":" + end.m, "]\n";
+    ret+= " min) [starts at ";
+    ret+= ts.startTime.h + ":" + ts.startTime.m, ", ends by " + end.h, ":" + end.m, "]\n";
     return ret;
 }
