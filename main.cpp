@@ -40,7 +40,7 @@ int main(){
     TimeSlot late2 = {movie4,{11,30}};
 
     cout << "getTimeSlot: " << endl;
-    string idk = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]  ";
+    string idk = "bananas ACTION (130 min) [starts at 14:10, ends by 16:20] ";
     string what = getTimeSlot(testing);
     for(auto a : what){
         cout << a << endl;
