@@ -39,7 +39,9 @@ int main(){
     TimeSlot late1 = {movie3,{10,10}}; 
     TimeSlot late2 = {movie4,{11,30}};
 
-    cout << getTimeSlot(testing) << endl;
+    cout << "getTimeSlot: " << endl;
+    cout << (getTimeSlot(testing) == "bananas ACTION (130 min) [starts at 14:10, ends by 16:20]") << endl;
+    cout << "----------------------------";
     //cout << timeOverlap(late1,late2) << endl; 
 
     //TimeSlot testEarly = earlierStart(testing, daytime);
