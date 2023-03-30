@@ -46,6 +46,9 @@ int main(){
         pls+=x;
     }
     cout << (what == pls) << endl;
+    for (auto x : pls){
+        cout << x << "-" << endl;
+    }
     cout << what << endl;
     cout << "----------------------------" << endl;
     //cout << timeOverlap(late1,late2) << endl; 
