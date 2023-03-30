@@ -45,6 +45,7 @@ int main(){
     for(auto x : what){
         pls+=x;
     }
+    cout << "pls: " << pls << endl;
     cout << (what == pls) << endl;
     for (auto x : pls){
         cout << x << "-" << endl;
