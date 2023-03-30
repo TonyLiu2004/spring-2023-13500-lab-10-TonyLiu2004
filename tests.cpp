@@ -45,3 +45,20 @@ TEST_CASE("scheduleAfter"){
     CHECK(t1.startTime.m == 20);
     CHECK(t1.movie.title == "Never gonna give you up");
 }
+
+TEST_CASE("timeOverlap"){
+    Movie movie1 = {"Back to the Future", COMEDY, 116};
+    Movie movie2 = {"Black Panther", ACTION, 134};
+    Movie movie3 = {"Julius Caesar",ROMANCE,90};
+    Movie movie4 = {"Never gonna give you up", ROMANCE,90};
+
+    TimeSlot t1 = {movie3,{10,10}}; 
+    TimeSlot t2 = {movie4,{11,30}};
+    TimeSlot t3 = {movie1,{9,10}};
+    TimeSlot t4 = {movie2,{13,21}};
+    CHECK(timeOverlap(t1,t2) == 1);
+    CHECK(timeOverlap(t3,t1) == 1);
+    CHECK(timeOverlap(t3,t4) == 0);
+    CHECK(timeOverlap(t1,t4) == 0);
+
+}
